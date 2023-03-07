@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>
+        Learn web dev basics
+    </title>
+    <!-- Google Fonts and texts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <!-- Google Fonts and texts ends here-->
+
+    <base href="file:///C:/data/HELLO_KC/eclipseCodeBase/WebDevelopment/first-website/">
+    <link href="styles/style.css" rel="stylesheet">
+    <script type="text/javascript" src="scripts/main.js"></script>
+
+</head>
+
+<body>
+    <h1> My web dev basics page.</h1>
+    <!--<h2 onmouseover="changeText('Hello Javascript.')"> lets learn web dev basics</h2> -->
+    <h2 > lets learn web dev basics</h2>
+        <!--<img src="./images/firefox-icon.png" alt="My test image0" />-->
+        <img src="images/firefox-icon.png" alt="My test image1" />
+
+        <a href="https://www.mozilla.org/en-US/about/manifesto/">Mozilla Manifesto</a>
+        <a href="https://www.mozilla.org/en-US/about/manifesto/"> <img src="../images/firefox-icon.png"
+                alt="Mozilla Manifesto Image hyperlink" /></a>
+
+
+        <p> Hello Grumpy Cat.</p>
+        <p> This is my cat. She likes sleeping, eating and playing with kids.</p>
+        
+        <input type="button" value="Change user" onclick="setUser()"/>  
+
+        <script>
+            const myHeading = document.querySelector("h1");
+            myHeading.textContent = "Hello world!";
+
+            let h2Var = document.querySelector("h2");
+            h2Var.addEventListener("click", function () {
+                alert("Stop poking heading H2.");
+            });
+
+            let h1Var = document.querySelector("h1");
+            h1Var.addEventListener("click", () => {
+                alert("Stop poking heading H1.");
+            });
+
+            const myImage = document.querySelector("img");
+            myImage.onclick = () => {
+                const mySrc = myImage.getAttribute("src");
+                if (mySrc === "images/firefox-icon.png") {
+                    myImage.setAttribute("src", "images/firefox2.png");
+                } else {
+                    myImage.setAttribute("src", "images/firefox-icon.png");
+                }
+            };
+
+
+        </script>
+</body>
+
+
+</html>
